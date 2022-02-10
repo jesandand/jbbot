@@ -154,7 +154,7 @@ const checkSCommand = (id) => {
 		}
 		}
 		}
-        body = type === "conversation" && mek.message.conversation.startsWith(prefix) ? mek.message.conversation : type == "imageMessage" && mek.message.imageMessage.caption.startsWith(prefix) ? mek.message.imageMessage.caption : type == "videoMessage" && mek.message.videoMessage.caption.startsWith(prefix) ? mek.message.videoMessage.caption : type == "extendedTextMessage" && mek.message.extendedTextMessage.text.startsWith(prefix) ? mek.message.extendedTextMessage.text : type == "buttonsResponseMessage" && mek.message[type].selectedButtonId ? mek.message[type].selectedButtonId : type == "stickerMessage" && getCmd(mek.message[type].fileSha256.toString("base64")) !== null && getCmd(mek.message[type].fileSha256.toString("base64")) !== undefined ? getCmd(mek.message[type].fileSha256.toString("base64")) : "";
+        body = type === "conversation" && mek.message.conversation.startsWith(prefix) ? mek.message.conversation : type == "imageMessage" && mek.message.imageMessage.caption.startsWith(prefix) ? mek.message.imageMessage.caption : type == "videoMessage" && mek.message.videoMessage.caption.startsWith(prefix) ? mek.message.videoMessage.caption : type == "extendedTextMessage" && mek.message.extendedTextMessage.text.startsWith(prefix) ? mek.message.extendedTextMessage.text : type == "buttonsResponseMessage" && mek.message[type].selectedButtonId ? mek.message[type].selectedButtonId : type == "listResponseMessage" ? mek.message.listResponseMessage.singleSelectReply.selectedRowId: type == "stickerMessage" && getCmd(mek.message[type].fileSha256.toString("base64")) !== null && getCmd(mek.message[type].fileSha256.toString("base64")) !== undefined ? getCmd(mek.message[type].fileSha256.toString("base64")) : "";
 		budy = (type === 'conversation') ? mek.message.conversation : (type === 'extendedTextMessage') ? mek.message.extendedTextMessage.text : ''
 		var pes = (type === 'conversation' && mek.message.conversation) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption ? mek.message.imageMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text ? mek.message.extendedTextMessage.text : ''
                 chatxs = (type === 'conversation' && mek.message.conversation) ? mek.message.conversation : (type == 'imageMessage') && mek.message.imageMessage.caption ? mek.message.imageMessage.caption : (type == 'documentMessage') && mek.message.documentMessage.caption ? mek.message.documentMessage.caption : (type == 'videoMessage') && mek.message.videoMessage.caption ? mek.message.videoMessage.caption : (type == 'extendedTextMessage') && mek.message.extendedTextMessage.text ? mek.message.extendedTextMessage.text : ""
@@ -569,7 +569,7 @@ const sendButMessage = (id, text1, desc1, but = [], options = {}) => {
         }
       }
     }
-if (isGroup && !mek.key.fromMe && isAntiLink && !isGroupAdmins && !isOwner && !isCoOwner && isBotGroupAdmins){
+if (isGroup && !mek.key.fromMe && !isGroupAdmins && !isOwner && !isCoOwner && isBotGroupAdmins){
             if (budy.includes("https://chat.whatsapp.com/")) {
                 reply(`「 G R O U P  L I N K  D E T E C T O R 」\n\nSepertinya kamu mengirimkan link grup, maaf kamu akan di kick`)
                 alpha.groupRemove(from, [sender])
@@ -589,80 +589,6 @@ if (isGroup && !mek.key.fromMe && isAntiLink && !isGroupAdmins && !isOwner && !i
       	//if (!isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mTEXT\x1b[1;37m]', time, color('Message'), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
 		sub_yt_zeeone_ofc = (type == 'listResponseMessage') ? mek.message.listResponseMessage.title : ''
         subscribezeeoneofc = (type == 'buttonsResponseMessage') ? mek.message.buttonsResponseMessage.selectedButtonId : ''
-
-if (subscribezeeoneofc == 'dmff'){
-let dmff =`*[ LIST HARGA DIAMOND FF ]*
-
-70 💎 IDR 10.000
-100 💎 IDR 15.000
-140 💎 IDR 20.000
-150 💎 IDR 22.000
-210 💎 IDR 30.000
-280 💎 IDR 40.000
-300 💎 IDR 42.000
-355 💎 IDR 48.000
-425 💎 IDR 58.000
-520 💎 IDR 70.000
-635 💎 IDR 86.000
-720 💎 IDR 95.000
-1000 💎 IDR 133.000
-1125 💎 IDR 150.000
-
-*🎁 MEMBER BULANAN*
-*IDR 120.000*
-
-*🎁 MEMBER MINGGUAN*
-*IDR 30.000*`
-await sendButMessage(from, dmff, `${creator}`, [{buttonId: 'formatt',buttonText: {displayText: `FORMAT`,},type: 1,},{buttonId: 'bayar',buttonText: {displayText: `BAYAR`,},type: 1,}], {quoted: mek})
-	}
-if (subscribezeeoneofc == 'dmml'){
-let dmml = `*[ LIST HARGA DIAMOND ML ]*
-
-86 💎 IDR 20.000
-172 💎 IDR 40.000
-257 💎 IDR 60.000
-344 💎 IDR 80.000
-429 💎 IDR 100.000
-514 💎 IDR 120.000
-600 💎 IDR 143.000
-706 💎 IDR 160.000
-878 💎 IDR 203.000
-963 💎 IDR 220.000
-1050 💎 IDR 240.000
-1222 💎 IDR 285.000
-
-*⭐ STARLIGHT IDR 130.000*
-
-*🌟 STARLIGHT + IDR 300.000*`
-await sendButMessage(from, dmml, `${creator}`, [{buttonId: 'format',buttonText: {displayText: `FORMAT`,},type: 1,},{buttonId: 'bayar',buttonText: {displayText: `BAYAR`,},type: 1,}], {quoted: mek})
-	}
-
-if (subscribezeeoneofc == 'high'){
-	let nsksk = `*[ LIST CHIP MD ( UNGU ) ]*
-
-60M IDR 8.000
-200M IDR 20.000
-400M IDR 38.000
-600M IDR 56.000
-1B IDR 72.000
-2B IDR 140.000`
-	await sendButMessage(from, nsksk, `${creator}`, [{buttonId: 'formatt',buttonText: {displayText: `FORMAT`,},type: 1,},{buttonId: 'bayar',buttonText: {displayText: `BAYAR`,},type: 1,}], {quoted: mek})
-	}
-if (subscribezeeoneofc == 'codm'){
-	let ksksnak = `*[ LIST CP CODM ]*
-
-*26 + 6 IDR 5.500*
-*53 + 9 IDR 10.500*
-*106 + 21 IDR 20.000*
-*264 + 53 IDR 48.000*
-*528 + 106 IDR 98.000*
-*1056 + 317 IDR 193.000*
-*1584 + 475 IDR 290.000*`
-	await sendButMessage(from, ksksnak, `${creator}`, [{buttonId: 'formatt',buttonText: {displayText: `FORMAT`,},type: 1,},{buttonId: 'bayar',buttonText: {displayText: `BAYAR`,},type: 1,}], {quoted: mek})
-	}
-if (subscribezeeoneofc == 'dmfff'){
-	await sendButMessage(from, 'DIAMOND FF & ML', `${creator}`, [{buttonId: 'dmff',buttonText: {displayText: `FF`,},type: 1,},{buttonId: 'dmml',buttonText: {displayText: `ML`,},type: 1,}], {quoted: mek})
-	}
 switch (command) {
 	case 'igo':
 	reply('https://instagram.com/itsnion_store\n\nJangan lupa follow kak')
@@ -704,9 +630,9 @@ const media1 = await alpha.prepareMessage(from, content1, MessageType.location, 
 let bacotlu1 = media1.message["ephemeralMessage"] ? media1.message.ephemeralMessage : media1
 let katanya = `Halo kak @${sender.split('@')[0]}  selamat datang di *ITSNION STORE* saya adalah bot whatsapp khusus yang di buat oleh *OWN ITSNION STORE* untuk melakukan topup diamond game online`
 const buttons1 = [
-  {buttonId: 'dmfff', buttonText: {displayText: 'FF & ML'}, type: 1},
-  {buttonId: 'codm', buttonText: {displayText: 'COD'}, type: 1},
-    {buttonId: 'high', buttonText: {displayText: 'HIGH DOMINO'}, type: 1}
+  {buttonId: 'command', buttonText: {displayText: 'PRICE LIST'}, type: 1},
+  {buttonId: 'codm', buttonText: {displayText: 'OWNER'}, type: 1},
+    {buttonId: 'gcstore', buttonText: {displayText: 'GROUP STORE'}, type: 1}
 ]
 
 const btn1 = {
@@ -729,6 +655,243 @@ alpha.sendMessage(from,  btn1, MessageType.buttonsMessage,{
 			quoted: fkontak,sendEphemeral: true 
 			})
 					break
+					case 'ff':{
+						let dmff =`*[ LIST HARGA DIAMOND FF ]*
+
+70 💎 IDR 10.000
+100 💎 IDR 15.000
+140 💎 IDR 20.000
+150 💎 IDR 22.000
+210 💎 IDR 30.000
+280 💎 IDR 40.000
+300 💎 IDR 42.000
+355 💎 IDR 48.000
+425 💎 IDR 58.000
+520 💎 IDR 70.000
+635 💎 IDR 86.000
+720 💎 IDR 95.000
+1000 💎 IDR 133.000
+1125 💎 IDR 150.000
+
+*🎁 MEMBER BULANAN*
+*IDR 120.000*
+
+*🎁 MEMBER MINGGUAN*
+*IDR 30.000*`
+await sendButMessage(from, dmff, `${creator}`, [{buttonId: 'formatt',buttonText: {displayText: `FORMAT`,},type: 1,},{buttonId: 'bayar',buttonText: {displayText: `BAYAR`,},type: 1,}], {quoted: mek})
+	}
+	break
+	case 'ml':
+	{
+		let dmml = `*[ LIST HARGA DIAMOND ML ]*
+
+86 💎 IDR 20.000
+172 💎 IDR 40.000
+257 💎 IDR 60.000
+344 💎 IDR 80.000
+429 💎 IDR 100.000
+514 💎 IDR 120.000
+600 💎 IDR 143.000
+706 💎 IDR 160.000
+878 💎 IDR 203.000
+963 💎 IDR 220.000
+1050 💎 IDR 240.000
+1222 💎 IDR 285.000
+
+*⭐ STARLIGHT IDR 130.000*
+
+*🌟 STARLIGHT + IDR 300.000*`
+await sendButMessage(from, dmml, `${creator}`, [{buttonId: 'format',buttonText: {displayText: `FORMAT`,},type: 1,},{buttonId: 'bayar',buttonText: {displayText: `BAYAR`,},type: 1,}], {quoted: mek})
+	}
+	break
+	case 'chip':{
+		let nsksk = `*[ LIST CHIP MD ( UNGU ) ]*
+
+60M IDR 8.000
+200M IDR 20.000
+400M IDR 38.000
+600M IDR 56.000
+1B IDR 72.000
+2B IDR 140.000`
+	await sendButMessage(from, nsksk, `${creator}`, [{buttonId: 'formatt',buttonText: {displayText: `FORMAT`,},type: 1,},{buttonId: 'bayar',buttonText: {displayText: `BAYAR`,},type: 1,}], {quoted: mek})
+	}
+	break
+	case 'codm':{
+		let ksksnak = `*[ LIST CP CODM ]*
+
+*26 + 6 IDR 5.500*
+*53 + 9 IDR 10.500*
+*106 + 21 IDR 20.000*
+*264 + 53 IDR 48.000*
+*528 + 106 IDR 98.000*
+*1056 + 317 IDR 193.000*
+*1584 + 475 IDR 290.000*`
+	await sendButMessage(from, ksksnak, `${creator}`, [{buttonId: 'formatt',buttonText: {displayText: `FORMAT`,},type: 1,},{buttonId: 'bayar',buttonText: {displayText: `BAYAR`,},type: 1,}], {quoted: mek})
+	}
+	break
+	case 'gensing':{
+		let ksksnak = `*[ GENSHIN IMPACT ]*
+
+60 🔮
+HARGA : 16.000
+
+300 + 30 🔮
+HARGA : 68.000
+
+980 + 110 🔮
+HARGA : 194.000
+
+1980 + 260 🔮
+HARGA : 420.000
+
+3280 + 600 🔮
+HARGA : 640.000
+
+6480 + 1600 🔮
+HARGA :1.273.000`
+await sendButMessage(from, ksksnak, `${creator}`, [{buttonId: 'formatt',buttonText: {displayText: `FORMAT`,},type: 1,},{buttonId: 'bayar',buttonText: {displayText: `BAYAR`,},type: 1,}], {quoted: mek})
+}
+break
+case 'apk':{
+	let ksksnak = `*[ YOUTUBE ]*
+
+❏ 1 BULAN INVITE = 3k
+❏ 1 BULAN INDIVIDU = 4k
+❏ 1 BULAN ADMIN = 5k
+❏ 4 BULAN INDIVIDU = 13k
+
+NB : email dari seller tambah 3k
+
+
+*[ NETFLIX ]*
+
+❏ 1 BULAN SHARED = 17k
+
+❏ NB : MASA AKTIF RANDOM 25 - 28 H KURANG DARI ITU BISA CLAIM GARANSI SELAMA MEMATUHI S&K
+
+*[ SPOTIFY ]*
+
+❏ 1 BULAN = 14k ( kosong )
+❏ 2 BULAN = 22k ( kosong )
+❏ 3 BULAN = 28k ( kosong )
+
+*[ DISNEY + HOTSTAR ]*
+
+❏ 1 BULAN SHARED = 17k
+
+*[ WE TV ]*
+
+❏ 1 TAHUN NON GARANSI = 8k
+❏ 1 TAHUN FULL GARANSI = 19K
+
+🔖  TANYA STOK DULU YAK 🔖
+`
+await sendButMessage(from, ksksnak, `${creator}`, [{buttonId: 'formatt',buttonText: {displayText: `FORMAT`,},type: 1,},{buttonId: 'bayar',buttonText: {displayText: `BAYAR`,},type: 1,}], {quoted: mek})
+}
+break
+case 'pb':{
+	let ksksnak = `*[ POINT BLANK ]*
+
+❏ 1.200 CASH
+HARGA : 12.000
+
+❏ 2.400 CASH
+HARGA : 20.000
+
+❏ 6.000 CASH
+HARGA : 48.000
+
+❏ 12.000 CASH
+HARGA : 93.000
+`
+await sendButMessage(from, ksksnak, `${creator}`, [{buttonId: 'formatt',buttonText: {displayText: `FORMAT`,},type: 1,},{buttonId: 'bayar',buttonText: {displayText: `BAYAR`,},type: 1,}], {quoted: mek})
+}
+break
+case 'pulsa':{
+	let ksksnak = `*[ PULSA INDOSAT ]*
+
+❏ 5.000
+HARGA : 6.500
+
+❏ 10.000
+HARGA : 10.500
+
+❏ 12.000
+HARGA : 12.860
+
+❏ 15.000
+HARGA : 15.860
+
+❏ 20.000
+HARGA : 20.500
+
+❏ 25.000
+HARGA : 25.500
+
+❏ 30.000
+HARGA : 30.500
+
+❏ 40.000
+HARGA : 40.500
+
+❏ 50.000
+HARGA : 50.500
+`
+await sendButMessage(from, ksksnak, `${creator}`, [{buttonId: 'formatt',buttonText: {displayText: `FORMAT`,},type: 1,},{buttonId: 'bayar',buttonText: {displayText: `BAYAR`,},type: 1,}], {quoted: mek})
+}
+break
+					case 'command':{
+					const rows1 = [{
+				"title": `FREE FIRE`,
+				"rowId": "ff"
+			},
+			{
+				"title": `CHIP MD ( UNGU )`,
+				"rowId": "chip"
+			},
+			{
+				"title": `MOBILE LEGENDS`,
+				"rowId": "ml"
+			},
+			{
+				"title": `CODM`,
+				"rowId": "codm"
+			},
+			{
+				"title": `GENSHIN IMPACT`,
+				"rowId": "gensing"
+			},
+			{
+				"title": `APK PREMIUM`,
+				"rowId": "apk"
+			},
+			{
+				"title": `POINT BLANK`,
+				"rowId": "pb"
+			},
+			{
+				"title": `PULSA`,
+				"rowId": "pulsa"
+			}
+
+]
+		
+	const sections1 = [{title: "SILAHKAN DI PILIH", rows: rows1}]
+const listt1 = {
+ buttonText: 'SELECT HERE',
+ title: `PRICE LIST STORE`,
+ description: `Halo ${pushname} 😊 selamat datang di store kami.`,
+ footerText: `${setting.cr}`,
+ sections: sections1,
+ listType: 1
+}
+
+alpha.sendMessage(from, listt1, MessageType.listMessage,{quoted:mek})
+}
+break
+case 'gcstore':
+reply('Isi di line ke 766')
+break
 case 'bcsticker':
 case 'bcstik':
 					if (!mek.key.fromMe && !isOwner && !isCoOwner) return fakestatus('```OWNER ONLY```')
@@ -892,12 +1055,12 @@ case 'setdesc':
            case 'antilink':
               if (!isGroup) return reply('only gc')
               if (!isBotGroupAdmins && !isGroupAdmins) return reply('khusus admin')
-              if (args[0].toLowerCase() === 'on'){
+              if (args[1] === 'on'){
               if (isAntiLink) return reply('udh on')
               antilink.push(from)
               fs.writeFileSync('./src/antilink.json', JSON.stringify(antilink))
               reply('```[ ✓ ]```Antilink di aktifkan')
-              } else if (args[0].toLowerCase() === 'off'){
+              } else if (args[1] === 'off'){
               let anu = antilink.indexOf(from)
               antilink.splice(anu, 1)
               fs.writeFileSync('./src/antilink.json', JSON.stringify(antilink))
@@ -923,7 +1086,7 @@ break
 
 case 'radd':
 if (!isGroup) return reply(mess.only.group)
-if (!itsMe && !isGroupAdmins) return reply(mess.only.admin)
+if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 if (sen.message.extendedTextMessage === undefined || sen.message.extendedTextMessage === null) return reply('Reply pesan yg ingin di Add!')
 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
@@ -933,7 +1096,7 @@ break
 
 case 'kick':
 if (!isGroup) return reply(mess.only.group)
-if (!itsMe && !isGroupAdmins) return reply(mess.only.admin)
+if (!isGroupAdmins) return reply(mess.only.admin)
 if(!q)return reply(`*Format salah!*\n\n*Example : ${prefix + command} @tag*`)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 yau = q.split('@')[1] + '@s.whatsapp.net'
@@ -943,7 +1106,7 @@ break
 
 case 'rkick':
 if (!isGroup) return reply(mess.only.group)
-if (!itsMe && !isGroupAdmins) return reply(mess.only.admin)
+if (!isGroupAdmins) return reply(mess.only.admin)
 if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Reply pesan yg ingin di Kick!')
 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
