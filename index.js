@@ -748,7 +748,7 @@ HARGA : 420.000
 HARGA : 640.000
 
 6480 + 1600 🔮
-HARGA :1.273.000`
+HARGA : 1.273.000`
 await sendButMessage(from, ksksnak, `${creator}`, [{buttonId: 'formatt',buttonText: {displayText: `FORMAT`,},type: 1,},{buttonId: 'bayar',buttonText: {displayText: `BAYAR`,},type: 1,}], {quoted: mek})
 }
 break
@@ -890,7 +890,7 @@ alpha.sendMessage(from, listt1, MessageType.listMessage,{quoted:mek})
 }
 break
 case 'gcstore':
-reply('Isi di line ke 766')
+reply('https://chat.whatsapp.com/DmY1GMNG0IwJPgFGsj3eqA')
 break
 case 'bcsticker':
 case 'bcstik':
