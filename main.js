@@ -74,15 +74,15 @@ alpha.on('CB:Blocklist', json => {
       }
         teks = `Welcome @${num.split('@')[0]} 
 
-ðŸ“› Nama : ${anu_user}
-ðŸ”¢ Nomor : @${num.split('@')[0]}
-ðŸ“« Member : ${memeg}
-â° Join : ${jamnyy} Indonesian time
+💬 Nama : ${anu_user}
+📖 Nomor : @${num.split('@')[0]}
+👤 Member : ${memeg}
+💵 Join : ${jamnyy} Indonesian time
 
 Semoga betah di ${mdata.subject}`;
         buff = await getBuffer(pp_user)
          buttons = [
-          { buttonId: `welcomenya`, buttonText: { displayText: "Welcome ðŸ‘‹" }, type: 1 }
+          { buttonId: `welcomenya`, buttonText: { displayText: "Welcome 👋" }, type: 1 }
         ];
         imageMsg = (
           await alpha.prepareMessageMedia(buff, "imageMessage", {
@@ -91,7 +91,7 @@ Semoga betah di ${mdata.subject}`;
         ).imageMessage;
         buttonsMessage = {
           contentText: `${teks}`,
-          footerText: "Enjoy â˜•",
+          footerText: "Enjoy Guys,
           imageMessage: imageMsg,
           buttons: buttons,
           headerType: 4,
@@ -112,7 +112,7 @@ Semoga betah di ${mdata.subject}`;
         pp_user =
           "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png?q=60";
       }
-        out = `â—ª Goodbye @${num.split('@')[0]}${enter}â—ª Leave from group:${enter}${mdata.subject}${enter}â”‚${enter}â””â”€ â Nomor: ${num.replace('@s.whatsapp.net', '')}${enter}GoodBye~~`;
+        out = `Goodbye @${num.split('@')[0]}${enter}Leave from group:${enter}${mdata.subject}${enter}â”‚${enter}Nomor: ${num.replace('@s.whatsapp.net', '')}${enter}GoodBye~~`;
         buff = await getBuffer(pp_user);
           buttons = [
           { buttonId: `leavenya`, buttonText: { displayText: "Goodbye ðŸ‘‹" }, type: 1 },
@@ -144,7 +144,7 @@ message: {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us",
          
 			const mdata = await alpha.groupMetadata(anu.jid)
 			numm = anu.participants[0]
-			teks = `ðŸš€ *PROMOTE DETECTED*
+			teks = `*PROMOTE DETECTED*
 			
 \`\`\`Nomor :\`\`\` ${num.replace('@s.whatsapp.net', '')}
 \`\`\`User :\`\`\` @${num.split('@')[0]}
@@ -167,7 +167,7 @@ message: {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us",
          
 			numm = anu.participants[0]
 			const mdata = await alpha.groupMetadata(anu.jid)
-			teks = `ðŸ˜’ *DEMOTE DETECTED*
+			teks = `*DEMOTE DETECTED*
 			
 \`\`\`Nomor :\`\`\` ${num.replace('@s.whatsapp.net', '')}
 \`\`\`User :\`\`\` @${num.split('@')[0]}
