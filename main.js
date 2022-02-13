@@ -91,7 +91,7 @@ Semoga betah di ${mdata.subject}`;
         ).imageMessage;
         buttonsMessage = {
           contentText: `${teks}`,
-          footerText: "Enjoy 🤝",
+          footerText: "Enjoy Guys",
           imageMessage: imageMsg,
           buttons: buttons,
           headerType: 4,
@@ -115,7 +115,7 @@ Semoga betah di ${mdata.subject}`;
         out = `Goodbye @${num.split('@')[0]}${enter}Leave from group:${enter}${mdata.subject}${enter}â”‚${enter}Nomor: ${num.replace('@s.whatsapp.net', '')}${enter}GoodBye~~`;
         buff = await getBuffer(pp_user);
           buttons = [
-          { buttonId: `leavenya`, buttonText: { displayText: "Goodbye ðŸ‘‹" }, type: 1 },
+          { buttonId: `leavenya`, buttonText: { displayText: "Goodbye 👋" }, type: 1 },
         ];
         imageMsg = (
           await alpha.prepareMessageMedia(buff, "imageMessage", {
@@ -140,7 +140,7 @@ Semoga betah di ${mdata.subject}`;
 		remoteJid: "0@s.whatsapp.net"},
 message: {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us",
 "inviteCode": "mememteeeekkeke","groupName": "Alphabot", 
-"caption": `Made With â£ï¸`, 'jpegThumbnail': fs.readFileSync(`./image/${setting.thumb}`)}}}
+"caption": `Made With LUTHFI 4YOU`, 'jpegThumbnail': fs.readFileSync(`./image/${setting.thumb}`)}}}
          
 			const mdata = await alpha.groupMetadata(anu.jid)
 			numm = anu.participants[0]
@@ -163,7 +163,7 @@ _Selamat jabatan kamu naik_`
 		remoteJid: "0@s.whatsapp.net"},
 message: {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us",
 "inviteCode": "mememteeeekkeke","groupName": "Alphabot", 
-"caption": `Made With â£ï¸`, 'jpegThumbnail': fs.readFileSync(`./image/${setting.thumb}`)}}}
+"caption": `Made With LUTHFI 4YOU`, 'jpegThumbnail': fs.readFileSync(`./image/${setting.thumb}`)}}}
          
 			numm = anu.participants[0]
 			const mdata = await alpha.groupMetadata(anu.jid)
@@ -189,7 +189,7 @@ _Kasian malah kena demote_`
 		
 alpha.on('group-update', async (anu) => {
 falfa = { key: {fromMe: false,participant: "0@s.whatsapp.net",
-remoteJid: "0@s.whatsapp.net"},message: {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "mememteeeekkeke","groupName": "Alphabot", "caption": `Made With â¤ï¸`, 'jpegThumbnail': fs.readFileSync(`image/${setting.thumb}`)}}}
+remoteJid: "0@s.whatsapp.net"},message: {"groupInviteMessage": {"groupJid": "6288213840883-1616169743@g.us","inviteCode": "mememteeeekkeke","groupName": "Alphabot", "caption": `Made With LUTHFI 4YOU`, 'jpegThumbnail': fs.readFileSync(`image/${setting.thumb}`)}}}
   metdata = await alpha.groupMetadata(anu.jid)
     if(anu.announce == 'false'){
     teks = `ã€Œ *Group Opened* ã€\n\n_Group telah dibuka oleh admin_\n_Sekarang semua member bisa mengirim pesan_`
