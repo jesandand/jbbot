@@ -91,7 +91,7 @@ Semoga betah di ${mdata.subject}`;
         ).imageMessage;
         buttonsMessage = {
           contentText: `${teks}`,
-          footerText: "Enjoy 🤝,"
+          footerText: "Enjoy 🤝",
           imageMessage: imageMsg,
           buttons: buttons,
           headerType: 4,
