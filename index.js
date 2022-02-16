@@ -840,6 +840,145 @@ HARGA : 50.500
 await sendButMessage(from, ksksnak, `${creator}`, [{buttonId: 'formatt',buttonText: {displayText: `FORMAT`,},type: 1,},{buttonId: 'bayar',buttonText: {displayText: `BAYAR`,},type: 1,}], {quoted: mek})
 }
 break
+case 'valo':{
+	let valo =`*[ LIST POINT VALORANT ]*
+
+❏ 125 POINTS
+*HARGA : 15.900*
+
+❏ 420 POINTS
+*HARGA : 50.000*
+
+❏ 700 POINTS
+*HARGA : 82.500*
+
+❏ 1375 POINTS 
+*HARGA : 149.500*
+
+❏ 2400 POINTS
+*HARGA : 248.000*
+
+❏ 4000 POINTS
+*HARGA : 397.000*
+
+❏ 8150 POINTS
+*HARGA : 795.000*`
+	await sendButMessage(from, valo, `${creator}`, [{buttonId: 'formatt',buttonText: {displayText: `FORMAT`,},type: 1,},{buttonId: 'bayar',buttonText: {displayText: `BAYAR`,},type: 1,}], {quoted: mek})
+	}
+	break
+	case 'live':{
+let live =`*[ LIST CREDIT LIFE AFTER ]*
+
+❏ 65 CREDITS
+*HARGA : 14.500*
+
+❏ 330 CREDITS
+*HARGA : 70.000*
+
+❏ 558 CREDITS
+*HARGA : 110.000*
+
+❏ 1108 CREDITS
+*HARGA : 203.000*
+
+❏ 2268 CREDITS
+*HARGA : 402.000*
+
+❏ 3468 CREDITS
+*HARGA : 625.000*
+
+❏ 5768 CREDITS
+*HARGA : 997.000*
+
+❏ 7768 CREDITS
+*HARGA : 1.328.000*`
+await sendButMessage(from, live, `${creator}`, [{buttonId: 'formatt',buttonText: {displayText: `FORMAT`,},type: 1,},{buttonId: 'bayar',buttonText: {displayText: `BAYAR`,},type: 1,}], {quoted: mek})
+	}
+	break
+	case 'shell':{
+let shell =`*[ LIST GARENA SHELL ]*
+
+❏ 33 SHELLS
+*HARGA : 10.000*
+
+❏ 66 SHELLS
+*HARGA : 20.000*
+
+❏ 165 SHELLS
+*HARGA : 50.000*
+
+❏ 330 SHELLS
+*HARGA : 95.000*`
+await sendButMessage(from, shell, `${creator}`, [{buttonId: 'formatt',buttonText: {displayText: `FORMAT`,},type: 1,},{buttonId: 'bayar',buttonText: {displayText: `BAYAR`,},type: 1,}], {quoted: mek})
+	}
+	break
+	case 'koin':{
+let koin =`*[ LIST KOIN EMAS ]*
+
+❏ 30M COIN EMAS
+*HARGA : 6.000*
+
+❏ 60M COIN EMAS
+*HARGA : 10.000*
+
+❏ 100M COIN EMAS
+*HARGA : 11.500*
+
+❏ 200M COIN EMAS 
+*HARGA : 22.000*
+
+❏ 300M COIN EMAS
+*HARGA : 43.000*
+
+❏ 400M COIN EMAS
+*HARGA : 53.000*
+
+❏ 1B COIN EMAS
+*HARGA : 77.000*`
+await sendButMessage(from, koin, `${creator}`, [{buttonId: 'formatt',buttonText: {displayText: `FORMAT`,},type: 1,},{buttonId: 'bayar',buttonText: {displayText: `BAYAR`,},type: 1,}], {quoted: mek})
+	}
+	break
+	case 'nokos':{
+let nokos =`*[ LIST NOMER KOSONG ]*
+
+❏ WA VERIF TELP
+*HARGA : 400P*
+
+❏ WA VERIF SMS
+*HARGA : 650P*
+
+❏ NOKOS ALL APK
+*HARGA : 600P*
+
+❏ NOKTEL 
+*HARGA : 600 - 800*
+
+❏ E - WALLET
+*HARGA : 700P*
+
+❏ GMAIL
+*HARGA : 700P*
+
+❏ E - COMMERCE
+*HARGA : 700P*
+
+❏ NOKOS LINE
+*HARGA : 700P*
+
+❏ NOKOS SNACKVIDEO
+*HARGA : 700P*
+
+❏ NOKOS TWITTER
+*HARGA : 700P*
+
+❏ NOKOS TIKTOK
+*HARGA : 700P*
+
+❏ NOKOS INSTAGRAM
+*HARGA : 700P*`
+await sendButMessage(from, nokos, `${creator}`, [{buttonId: 'formatt',buttonText: {displayText: `FORMAT`,},type: 1,},{buttonId: 'bayar',buttonText: {displayText: `BAYAR`,},type: 1,}], {quoted: mek})
+	}
+	break
 					case 'command':{
 					const rows1 = [{
 				"title": `FREE FIRE`,
@@ -872,6 +1011,26 @@ break
 			{
 				"title": `PULSA`,
 				"rowId": "pulsa"
+			},
+			{
+				"title": `VALORANT`,
+				"rowId": "valo"
+			},
+			{
+				"title": `CREDIT LIFE AFTER`,
+				"rowId": "live"
+			},
+			{
+				"title": `GARENA SHELL`,
+				"rowId": "shell"
+			},
+			{
+				"title": `KOIN EMAS`,
+				"rowId": "koin"
+			},
+			{
+				"title": `NOKOS`,
+				"rowId": "nokos"
 			}
 
 ]
@@ -1043,6 +1202,20 @@ case 'setdesc':
 					fakegroup('```SUKSESS BROADCAST```')
 					}
 					break
+					case 'group': 
+   case 'gc': case 'grup':
+                if (!isGroup) return reply(lang.onlygc());
+        if (!isGroupAdmins && !isBotGroupAdmins) return reply(lang.onlygcAdmin());
+        if (args[0] == "open") {
+          await alpha.groupSettingChange(from, GroupSettingChange.messageSend, false)
+					reply('S U C C E S S  O P E N I N G  G R O U P')
+        } else if (args[0] == "close") {
+          await alpha.groupSettingChange(from, GroupSettingChange.messageSend, true)
+					reply('S U C C E S S  C L O S I N G  G R O U P')
+        } else if (!q) {
+        	reply(`Penggunaan .group close/open`)
+        }
+        break
 			case 'd': case 'done':
 			apanih = `「 *PESANAN SELESAI* 」\n\nNama : ${pushname}\nNomor : ${sender.split('@')[0]}\nHari : ${tampilTanggal}\nWaktu : ${tampilWaktu}\nStatus : Pesanan Selesai.\n\nTerimakasih atas pesanannya, kami tunggu pesanan berikutnya 😊`
 			alpha.sendMessage(from, apanih, text, {quoted : ftoko, contextInfo: {"mentionedJid": [sender],"forwardingScore":999,"isForwarded":true},sendEphemeral: true})
@@ -1115,14 +1288,7 @@ alpha.groupRemove(from, mentioned)
 break
 				default:
 				
-				if (budy.includes("eror",'error','Eror','Error')){
-					alpha.updatePresence(from, Presence.composing)
-					const daieeeee = fs.readFileSync('./stik/10_1.webp');
-					alpha.sendMessage(from, daieeeee, sticker, { contextInfo: {mentionedJid: [sender]}, quoted: { "key": { "participant": `${numbernye}@s.whatsapp.net`, "remoteJid":  '6283136505591-1614953337@g.us', "fromMe": false, "id": "B391837A58338BA8186C47E51FFDFD4A" }, "message": { "documentMessage": { "jpegThumbnail": fs.readFileSync(`image/${thumbnail}`), "mimetype": "application/octet-stream","title": "YT : ZEEONE OFC", "fileLength": "36", "pageCount": 0, "fileName": `Kenapa bisa error???`}}, "messageTimestamp": "1614069378", "status": "PENDING"}})
-		        }
-		
-
-	
+				
 if (budy.startsWith('=>')){
 if (!mek.key.fromMe && !isOwner && !isCoOwner) return fakestatus('```OWNER ONLY```')
 var konsol = budy.slice(3)
