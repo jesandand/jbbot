@@ -685,22 +685,35 @@ await sendButMessage(from, dmff, `${creator}`, [{buttonId: 'formatt',buttonText:
 	{
 		let dmml = `*[ LIST HARGA DIAMOND ML ]*
 
-86 💎 IDR 20.000
-172 💎 IDR 40.000
-257 💎 IDR 60.000
-344 💎 IDR 80.000
-429 💎 IDR 100.000
-514 💎 IDR 120.000
-600 💎 IDR 143.000
-706 💎 IDR 160.000
-878 💎 IDR 203.000
-963 💎 IDR 220.000
-1050 💎 IDR 240.000
-1222 💎 IDR 285.000
+86 💎 IDR 21.000
+172 💎 IDR 41.000
+257 💎 IDR 62.000
+344 💎 IDR 83.000
+429 💎 IDR 103.000
+514 💎 IDR 124.000
+600 💎 IDR 145.000
+706 💎 IDR 165.000
+878 💎 IDR 207.000
+963 💎 IDR 227.000
+1050 💎 IDR 248.000
+1220 💎 IDR 289.000
+1412 💎 IDR 330.000
+1584 💎 IDR 372.000
+1669 💎 IDR 392.000
+2195 💎 IDR 491.000
+2901 💎 IDR 656.000
+3073 💎 IDR 698.000
+3688 💎 IDR 817.000
+4032 💎 IDR 900.000
+4394 💎 IDR 982.000
+5532 💎 IDR 1.227.000
+6238 💎 IDR 1.392.000
+7727 💎 IDR 1.718.000
 
-*⭐ STARLIGHT IDR 130.000*
 
-*🌟 STARLIGHT + IDR 300.000*`
+*⭐ STARLIGHT IDR 136.000*
+
+*🌟 STARLIGHT + IDR 310.000*`
 await sendButMessage(from, dmml, `${creator}`, [{buttonId: 'format',buttonText: {displayText: `FORMAT`,},type: 1,},{buttonId: 'bayar',buttonText: {displayText: `BAYAR`,},type: 1,}], {quoted: mek})
 	}
 	break
@@ -771,9 +784,11 @@ NB : email dari seller tambah 3k
 
 *[ SPOTIFY ]*
 
-❏ 1 BULAN = 14k ( kosong )
+❏ 1 BULAN = 15k 
 ❏ 2 BULAN = 22k ( kosong )
 ❏ 3 BULAN = 28k ( kosong )
+
+❏ NB : AKUN DARI PEMBELI SERTAKAN AKUN SPOTIFY DAN PW NYA
 
 *[ DISNEY + HOTSTAR ]*
 
@@ -814,7 +829,7 @@ case 'pulsa':{
 HARGA : 6.500
 
 ❏ 10.000
-HARGA : 10.500
+HARGA : 11.500
 
 ❏ 12.000
 HARGA : 12.860
